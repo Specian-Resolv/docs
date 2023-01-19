@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (optional; defaults to master)
+media_folder: "public/images/uploads" 
+logo_url: https://status.resolvbot.xyz/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fsup%2Fimage%2Fupload%2Fv1671560017%2Fyvbetixhdk1yhaffziib.ico&w=1920&q=75
+display_url: https://resolvbot.xyz
+
+collections:
+  - name: "guides" # Used in routes, e.g., /admin/collections/blog
+    label: "Guides" # Used in the UI
+    folder: "src/pages/guides" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+  - name: "best-practices" # Used in routes, e.g., /admin/collections/blog
+    label: "Best Practices" # Used in the UI
+    folder: "src/pages/best-practices" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
